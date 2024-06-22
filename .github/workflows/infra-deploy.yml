@@ -62,7 +62,7 @@ jobs:
             then
               echo "Resource group already exists in the subscription"
             else
-              az group create  --name ${{ vars.RESOURCE_GROUP }} --location ${{ vars.LOCATION }}
+              az group create  --name ${{ vars.RESOURCE_GROUP }} --location ${{ vars.LOCATION }} --tags environment=dev project=container
               echo "Resource group created"
             fi
 
